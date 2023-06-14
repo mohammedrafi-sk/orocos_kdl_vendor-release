@@ -15,6 +15,7 @@ endif()
 
 macro(build_orocos_kdl)
   set(extra_cmake_args)
+  set(CMAKE_TLS_VERIFY TRUE)
   if(DEFINED CMAKE_BUILD_TYPE)
     list(APPEND extra_cmake_args -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE})
   endif()
